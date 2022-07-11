@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/*  
+
+### Primary
+
+- Pale blue: hsl(225, 100%, 94%) (background)
+- Bright blue: hsl(245, 75%, 52%) (butto)
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%) (plan bg)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)
+
+
+###font
+font-family: 'Red Hat Display', sans-serif;
+
+*/
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100vh;
+
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+
+    background: hsl(225, 100%, 94%);
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.container {
+    height: 100%;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.card {
+
+    height: 529px;
+    width: 344px;
+    margin: 10px;
+    border-radius: 16px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 31% 69%;
+    background: hsl(0, 0%, 100%);
+}
+
+.card .card-image {
+    display: flex;
+}
+
+.card .card-image img {
+    height: auto;
+    width: 344px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+    object-fit: cover;
+}
+
+.card .card-content {
+
+    padding: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12% 25% 35% 15% 20%;
+}
+
+.card .card-content .card-content-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-content .card-content-heading h3 {
+    color: hsl(223, 47%, 23%);
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.card .card-content .card-content-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-content .card-content-desc p {
+    color: hsl(224, 23%, 55%);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.card .card-content .card-content-plan {
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(225, 100%, 98%);
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.card .card-content .card-content-plan .card-content-plan-icon {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+    flex: 1 0 20%;
+}
+
+.card .card-content .card-content-plan .card-content-plan-icon img {
+    height: 38px;
+    object-fit: cover;
+}
+
+.card .card-content .card-content-plan .card-content-plan-details {
+    display: grid;
+    flex: 1 0 45%;
+    grid-template-columns: 1fr;
+    gap: 1px
+}
+
+.card .card-content .card-content-plan .card-content-plan-details .card-content-plan-details-heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.card .card-content .card-content-plan .card-content-plan-details .card-content-plan-details-heading h5 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+
+.card .card-content .card-content-plan .card-content-plan-details .card-content-plan-details-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.card .card-content .card-content-plan .card-content-plan-details .card-content-plan-details-price h5 {
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
+}
+
+
+.card .card-content .card-content-plan .card-content-plan-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 20%;
+}
+
+.card .card-content .card-content-plan .card-content-plan-link a {
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+    transition: color 500ms ease;
+}
+
+.card .card-content .card-content-plan .card-content-plan-link a:hover {
+    color: hsl(245, 81%, 68%);
+    text-decoration: none;
+}
+
+.card .card-content-button {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.card .card-content-button button {
+    font-size: 11px;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    background: hsl(245, 75%, 52%);
+    border: none;
+    padding: 2px;
+    border-radius: 8px;
+
+    transition: background 500ms ease;
+}
+
+.card .card-content-button button:hover {
+    background: hsl(245, 81%, 68%);
+}
+
+.card .card-content-cancel-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-content-cancel-link a {
+    font-size: 12px;
+    font-weight: 900;
+    color: hsl(224, 23%, 55%);
+
+    text-decoration: none;
+
+    transition: color 500ms ease;
+
+
+}
+
+.card .card-content-cancel-link a:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+
+
+@media (max-width:375px) {
+    body {
+        background-image: url('./images/pattern-background-mobile.svg');
+    }
+}

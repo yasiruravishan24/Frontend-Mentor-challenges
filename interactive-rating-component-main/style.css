@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* 
+colors
+    ### Primary
+
+        - Orange: hsl(25, 97%, 53%)
+
+    ### Neutral
+
+        - White: hsl(0, 0%, 100%)
+        - Light Grey: hsl(217, 12%, 63%)
+        - Medium Grey: hsl(216, 12%, 54%)
+        - Dark Blue: hsl(213, 19%, 18%)
+        - Very Dark Blue: hsl(216, 12%, 8%)
+
+font
+    font-family: 'Overpass', sans-serif;
+    Weights: 400, 700
+
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 15px;
+    height: 100vh;
+    background: hsl(216, 12%, 8%);
+    font-family: 'Overpass', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 350px;
+    width: 350px;
+    padding: 28px;
+
+    background: hsl(215, 22%, 15%);
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.8fr 1.5fr 2fr 2fr 1fr;
+    z-index: 1;
+}
+
+.card .card-icon .icon {
+    height: 45px;
+    width: 45px;
+
+    border-radius: 50px;
+    background-color: hsl(213, 19%, 18%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card .card-header h2 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+.card .card-description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card .card-description p {
+    color: hsl(216, 12%, 54%);
+    font-size: 13px;
+}
+
+.card .card-ratings {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.card .card-ratings span {
+    height: 45px;
+    width: 45px;
+
+    padding-top: 5px;
+
+    color: hsl(216, 12%, 54%);
+    font-weight: 400;
+
+    border-radius: 50px;
+    background-color: hsl(213, 19%, 18%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color, background-color 500ms ease-in-out;
+}
+
+.card .card-ratings span:hover {
+    color: white;
+    background-color: hsl(25, 97%, 53%);
+    cursor: pointer;
+}
+
+.card .card-ratings .active {
+    color: white !important;
+    background-color: hsl(217, 12%, 63%) !important;
+    transition: 0;
+}
+
+
+.card .card-btn {
+    display: grid;
+}
+
+.card .card-btn button {
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 12px 0px;
+
+    background: hsl(25, 97%, 53%);
+    border: none;
+    border-radius: 50px;
+    transition: color, background-color 500ms ease-in-out;
+}
+
+.card .card-btn button:hover {
+    background: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.card-thank {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    padding: 28px;
+
+    height: 350px;
+    width: 350px;
+    padding: 28px;
+
+    background: hsl(215, 22%, 15%);
+    border-radius: 25px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6fr 3fr 1fr 3.5fr;
+    z-index: 0;
+}
+
+.card-thank .card-thank-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-thank .card-thank-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-thank .card-thank-rating .card-thank-rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(213, 19%, 18%);
+    padding: 5px 18px;
+    border-radius: 50px;
+
+}
+
+.card-thank .card-thank-rating .card-thank-rate h4 {
+    color: hsl(25, 97%, 53%);
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.card-thank .card-thank-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.card-thank .card-thank-header h2 {
+    color: hsl(0, 0%, 100%);
+}
+
+.card-thank .card-thank-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.card-thank .card-thank-description p {
+    color: hsl(216, 12%, 54%);
+    font-size: 13px;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:375px) {}

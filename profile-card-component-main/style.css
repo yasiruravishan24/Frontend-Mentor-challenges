@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/* 
+
+##colors
+    Dark cyan: hsl(185, 75%, 39%)
+    Very dark desaturated blue: hsl(229, 23%, 23%)
+    Dark grayish blue: hsl(227, 10%, 46%)
+    Dark gray: hsl(0, 0%, 59%)
+
+
+    font-family: 'Kumbh Sans', sans-serif;
+    - Weights: 400, 700
+*/
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+
+    background: var(--dark-cyan);
+
+    position: relative;
+}
+
+.top {
+    position: absolute;
+    top: -100%;
+    left: -20%;
+    z-index: -999;
+}
+
+.bottom {
+    position: absolute;
+    bottom: -100%;
+    right: -20%;
+    z-index: -998;
+
+}
+
+.container {
+
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+.card {
+    height: 352px;
+    width: 330px;
+    border-radius: 14px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3.7fr 6.3fr;
+
+    background: hsl(0, 0%, 100%);
+
+
+    z-index: 1;
+}
+
+.card .cover-image img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    flex: 1;
+}
+
+.card .card-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 33% 37%;
+}
+
+.card .card-content .profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-content .profile-picture .image {
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+    background: hsl(0, 0%, 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    top: -50%;
+}
+
+.card .card-content .profile-picture .image img {
+
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+
+}
+
+.card .card-content .profile-details {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 40%;
+    align-content: flex-start;
+}
+
+.card .card-content .profile-details .bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-content .profile-details .bio h3:nth-child(1) {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.card .card-content .profile-details .bio h3:nth-child(2) {
+
+    color: var(--dark-gray);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.card .card-content .profile-details .address {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card .card-content .profile-details .address h3 {
+    color: var(--dark-gray);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.card .card-content .profile-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid hsla(0, 0%, 59%, 0.253)
+}
+
+.card .card-content .profile-status .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+
+}
+
+.card .card-content .profile-status .item h3 {
+    color: var(--very-dark-desaturated-blue);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+
+}
+
+.card .card-content .profile-status .item h4 {
+    color: var(--dark-gray);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+}
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+
+    html,
+    body {
+        overflow: hidden
+    }
+
+    .top {
+        top: -20%;
+        left: -50%;
+        height: 60%;
+    }
+
+    .bottom {
+        bottom: -20%;
+        right: -50%;
+        height: 60%;
+    }
+}
+
+@media (min-width:1024px) and (min-height:1366px){
+
+    html,
+    body {
+        overflow: hidden
+    }
+
+    .top {
+        top: -20%;
+        left: -50%;
+        height: 75%;
+    }
+
+    .bottom {
+        bottom: -20%;
+        right: -50%;
+        height: 75%;
+    }
+}
