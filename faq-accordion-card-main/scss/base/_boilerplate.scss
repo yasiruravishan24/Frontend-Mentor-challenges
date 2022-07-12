@@ -1,0 +1,8 @@
+@use '../sass-utils' as utils;
+
+body{
+    font-size: 12px;
+    height: 100vh;
+    background: utils.$color-background;
+    background-repeat: no-repeat; 
+}
