@@ -1,0 +1,18 @@
+@use '../sass-utils' as util;
+
+body {
+    min-height: 100vh;
+    max-width: util.toRem(1440);
+
+    background-color: util.$white;
+    margin: auto auto;
+
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}

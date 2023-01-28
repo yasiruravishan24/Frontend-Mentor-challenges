@@ -1,0 +1,65 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\..\\Desktop\\project"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\vue\\vue"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\Angular\\Angular"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\Angular\\Typescript"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\..\\Desktop\\HNDSE"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\..\\Documents\\Adamant gems\\adamant_gems_new"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\Full Stack Web Development with Vue Js, NodeJS, MongoDB, JS\\javascript"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\Git\\git"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\tree.js\\Three.js"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\GSAP\\GSAP"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\yuka\\yuka"
+		},
+		{
+			"path": "..\\..\\.."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\Spring boot\\Spring Boot"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\..\\Documents\\Final Project"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\laravel\\Laravel"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\extension\\extensions"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\sass\\sass"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\glsl\\glsl"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\React\\react"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html",
+		"glsl-linter.validatorPath": "C:\\Users\\USER\\.vscode\\extensions\\mrjjot.vscode-glsl-linter-1.2.0\\bin\\glslangValidator"
+	}
+}

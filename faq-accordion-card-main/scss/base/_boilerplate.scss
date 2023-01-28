@@ -3,6 +3,17 @@
 body{
     font-size: 12px;
     height: 100vh;
+    max-width: 1440px;
+    margin-inline: auto;
+    overflow: hidden;
     background: utils.$color-background;
+
     background-repeat: no-repeat; 
+
+    @media (max-width: 375px) {
+        max-height: 100%;
+        overflow: scroll;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
 }

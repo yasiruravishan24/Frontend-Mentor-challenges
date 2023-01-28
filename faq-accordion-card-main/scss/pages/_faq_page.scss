@@ -1,0 +1,256 @@
+@use "../sass-utils" as util;
+
+.container {
+  height: 100%;
+  max-width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  .card {
+    height: 450px;
+    width: 816px;
+    border-radius: 20px;
+    background: util.$card-color;
+    display: flex;
+
+    @media (max-width: 375px) {
+      flex-direction: column;
+      
+      height: 535px;
+      width: 325px;
+
+      padding-bottom: 35px;
+
+    }
+
+    &__image {
+      flex: 1 0 45%;
+
+      @media (max-width: 375px) {
+        flex: 1 0 20%;
+  
+      }
+
+      &__desktop {
+        position: relative;
+
+        @media (max-width: 375px) {
+          display: none;
+        }
+
+        img {
+          &:nth-of-type(1) {
+            position: absolute;
+            z-index: 3;
+            top: 180px;
+            left: -115px;
+            height: 165px;
+            width: auto;
+          }
+          &:nth-of-type(2) {
+            position: absolute;
+            z-index: 2;
+            object-fit: cover;
+            top: 60px;
+            left: 0;
+            object-position: -75px 0;
+            height: 320px;
+            width: auto;
+          }
+          &:nth-of-type(3) {
+            position: absolute;
+            z-index: 1;
+            top: -20px;
+
+            height: 500px;
+
+            left: 0;
+            object-fit: cover;
+            object-position: -165px 0;
+          }
+        }
+      }
+
+      &__mobile {
+        display: none;
+        position: relative;
+
+        @media (max-width: 375px) {
+          display: block;
+        }
+
+        img {
+          &:nth-of-type(1) {
+            position: absolute;
+            z-index: 2;
+            object-fit: cover;
+            top: -105px;
+            left:15%;
+            height: 175px;
+            width: auto;
+          }
+          &:nth-of-type(2) {
+            position: absolute;
+            z-index: 1;
+            top: 2px;
+            left:15%;
+            height: 100px;
+            width: auto;
+            object-fit: cover;
+          }
+        }
+
+       
+      }
+    }
+
+    &__content {
+      flex: 1 0 55%;
+      padding: 50px;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1.5fr 8.5fr;
+      z-index: 4;
+
+      @media (max-width: 375px) {
+        flex: 1 0 80%;
+
+        padding: 25px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5fr 8.5fr;
+
+      }
+
+      &__heading {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media (max-width: 375px) {
+          justify-content: center;
+  
+        }
+
+        h2 {
+          flex: 1;
+          font-size: 30px;
+          color: util.$very-dark-desaturated-blue;
+
+          @media (max-width: 375px) {
+            text-align: center;
+    
+          }
+        }
+
+
+      }
+
+      &__accordion {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        &__item {
+          display: grid;
+          grid-template-columns: 1fr;
+          border-bottom: 1px solid util.$light-grayish-blue;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &__text {
+              flex: 1 0 80%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+
+              @media (max-width: 375px) {
+                flex: 1 0 90%;
+          
+              }
+
+              h4 {
+                color: util.$very-dark-grayish-blue;
+                font-size: 14px;
+
+                &:hover {
+                  color: util.$soft-red;
+                }
+              }
+              .active {
+                color: util.$very-dark-desaturated-blue;
+                font-weight: 700;
+              }
+            }
+            &__img {
+              flex: 1 0 20%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              @media (max-width: 375px) {
+                justify-content: flex-end;
+                flex: 1 0 10%;
+          
+              }
+
+              img {
+                height: 7px;
+              }
+            }
+          }
+
+          &__panel {
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-right: 42px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            display: none;
+
+            p {
+              font-size: 12px;
+              color: util.$dark-grayish-blue;
+
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .accordion {
+//     background-color: #eee;
+//     color: #444;
+//     cursor: pointer;
+//     padding: 18px;
+//     width: 100%;
+//     border: none;
+//     text-align: left;
+//     outline: none;
+//     font-size: 15px;
+//     transition: 0.4s;
+//   }
+
+//   .active, .accordion:hover {
+//     background-color: #ccc;
+//   }
+
+//   .panel {
+//     padding: 0 18px;
+//     display: none;
+//     background-color: white;
+//     overflow: hidden;
+//   }

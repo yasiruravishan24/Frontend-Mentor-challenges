@@ -1,0 +1,32 @@
+@use "./functions" as fun;
+
+// if site mobile first -> desktop second = min-width (order - m -> l -> xl)
+$breakpoints-up: (
+  "medium": fun.toEm(700),
+  "large": fun.toEm(900),
+  "xlarger": fun.toEm(1024),
+);
+
+// if site desktop first -> mobile second = max-width (order - l -> m -> s)
+$breakpoints-down: (
+  // "large": fun.toEm(1023.98),
+  // "medium": fun.toEm(899.98),
+  // "small": fun.toEm(699.98),
+  "large": fun.toEm(1024),
+  "medium": fun.toEm(900),
+  "small": fun.toEm(700),
+);
+
+// min-width mixin
+@mixin breakpoints-up($size) {
+    @media(min-width: map-get($breakpoints-up, $size)){
+        @content;
+    }
+}
+
+// max-width mixin
+@mixin breakpoints-down($size) {
+    @media(max-width: map-get($breakpoints-down, $size)){
+        @content
+    }
+}

@@ -19,67 +19,104 @@
     <div class="container">
       <div class="card">
         <div class="card__image">
-          <div class="image__desktop">
+          <div class="card__image__desktop">
             <img src="./images/illustration-box-desktop.svg" alt="" />
             <img src="./images/illustration-woman-online-desktop.svg" alt="" />
             <img src="./images/bg-pattern-desktop.svg" alt="" />
           </div>
-          <div class="image__modile">
+          <div class="card__image__mobile">
             <img src="./images/illustration-woman-online-mobile.svg" alt="" />
             <img src="./images/bg-pattern-mobile.svg" alt="" />
           </div>
         </div>
         <div class="card__content">
-          <div class="content__heading">FAQ</div>
-          <div class="content__accordion">
-            <button class="accordion__button">
-              How many team members can I invite?
-            </button>
-            <div class="accordion__panel">
-              <p>
-                You can invite up to 2 additional users on the Free plan. There
-                is no limit on team members for the Premium plan.
-              </p>
+          <div class="card__content__heading"><h2>FAQ</h2></div>
+          <div class="card__content__accordion">
+            
+            <div class="card__content__accordion__item">
+              <div class="card__content__accordion__item__button">
+                <div class="card__content__accordion__item__button__text">
+                  <h4>How many team members can I invite?</h4>
+                </div>
+                <div class="card__content__accordion__item__button__img">
+                  <img src="./images/icon-arrow-down.svg" alt="" />
+                </div>
+              </div>
+              <div class="card__content__accordion__item__panel">
+                <p>
+                  You can invite up to 2 additional users on the Free plan.
+                  There is no limit on team members for the Premium plan.
+                </p>
+              </div>
             </div>
 
-            <button class="accordion__button">
-              What is the maximum file upload size?
-            </button>
-            <div class="accordion__panel">
-              <p>
-                No more than 2GB. All files in your account must fit your
-                allotted storage space.
-              </p>
+            <div class="card__content__accordion__item">
+              <div class="card__content__accordion__item__button">
+                <div class="card__content__accordion__item__button__text">
+                  <h4>What is the maximum file upload size?</h4>
+                </div>
+                <div class="card__content__accordion__item__button__img">
+                  <img src="./images/icon-arrow-down.svg" alt="" />
+                </div>
+              </div>
+              <div class="card__content__accordion__item__panel">
+                <p>
+                  No more than 2GB. All files in your account must fit your
+                  allotted storage space.
+                </p>
+              </div>
             </div>
 
-            <button class="accordion__button">
-              How do I reset my password?
-            </button>
-            <div class="accordion__panel">
-              <p>
-                Click “Forgot password” from the login page or “Change password”
-                from your profile page. A reset link will be emailed to you.
-              </p>
+            <div class="card__content__accordion__item">
+              <div class="card__content__accordion__item__button">
+                <div class="card__content__accordion__item__button__text">
+                  <h4>How do I reset my password?</h4>
+                </div>
+                <div class="card__content__accordion__item__button__img">
+                  <img src="./images/icon-arrow-down.svg" alt="" />
+                </div>
+              </div>
+              <div class="card__content__accordion__item__panel">
+                <p>
+                  Click “Forgot password” from the login page or “Change
+                  password” from your profile page. A reset link will be emailed
+                  to you.
+                </p>
+              </div>
             </div>
 
-            <button class="accordion__button">
-              Can I cancel my subscription?
-            </button>
-            <div class="accordion__panel">
-              <p>
-                Yes! Send us a message and we’ll process your request no
-                questions asked.
-              </p>
+            <div class="card__content__accordion__item">
+              <div class="card__content__accordion__item__button">
+                <div class="card__content__accordion__item__button__text">
+                  <h4>Can I cancel my subscription?</h4>
+                </div>
+                <div class="card__content__accordion__item__button__img">
+                  <img src="./images/icon-arrow-down.svg" alt="" />
+                </div>
+              </div>
+              <div class="card__content__accordion__item__panel">
+                <p>
+                  Yes! Send us a message and we’ll process your request no
+                  questions asked.
+                </p>
+              </div>
             </div>
 
-            <button class="accordion__button">
-              Do you provide additional support?
-            </button>
-            <div class="accordion__panel">
-              <p>
-                Chat and email support is available 24/7. Phone lines are open
-                during normal business hours.
-              </p>
+            <div class="card__content__accordion__item">
+              <div class="card__content__accordion__item__button">
+                <div class="card__content__accordion__item__button__text">
+                  <h4>Do you provide additional support?</h4>
+                </div>
+                <div class="card__content__accordion__item__button__img">
+                  <img src="./images/icon-arrow-down.svg" alt="" />
+                </div>
+              </div>
+              <div class="card__content__accordion__item__panel">
+                <p>
+                  Chat and email support is available 24/7. Phone lines are open
+                  during normal business hours.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -87,18 +124,38 @@
     </div>
 
     <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
+      var acc = document.getElementsByClassName(
+        "card__content__accordion__item"
+      );
+
+      var active = null;
+
+
+      function toggle(current) {
+        if(active != current){
+            if(active != null){
+              active.lastElementChild.style.display = "none"
+              active.firstElementChild.firstElementChild.firstElementChild.classList.remove("active");
+              current.lastElementChild.style.display = "flex"
+              active = current;
+            }else{
+              current.lastElementChild.style.display = "flex"
+              active = current;
+            }
+            
+            active.firstElementChild.firstElementChild.firstElementChild.classList.toggle("active");
+           
+          }else{
+            active.lastElementChild.style.display = "none"
+            active.firstElementChild.firstElementChild.firstElementChild.classList.remove("active");
+            active = null;
+          }
+
+      }
 
       for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
+          toggle(this);
         });
       }
     </script>

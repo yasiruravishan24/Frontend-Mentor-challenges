@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+// pixcel to rem
+@function toRem($pixel) {
+    @if math.is_unitless($pixel) {
+        @return math.div($pixel, 16) + rem;
+    }
+    @else {
+        @error 'pixel value is not valid';
+    }
+}
+
+// pixcel to em
+@function toEm($pixel) {
+    @if math.is_unitless($pixel) {
+        @return math.div($pixel, 16) + em;
+    }
+    @else {
+        @error 'pixel value is not valid';
+    }
+}
